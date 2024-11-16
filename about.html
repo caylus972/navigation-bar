@@ -1,0 +1,34 @@
+class Codingal:
+def __init__(self, name):
+self.name = name
+self.services = [
+"Interactive coding courses for kids",
+"Live coding classes with expert mentors",
+"Creative projects and competitions",
+"Focus on STEM and future-ready skills",
+"Comprehensive curriculum aligned with K-12 education",
+]
+self.mission = "To inspire school kids to fall in love with coding and prepare them for the digital future."
+
+def display_info(self):
+print(f"Welcome to {self.name}!")
+print("\nWhat we do:")
+for idx, service in enumerate(self.services, 1):
+print(f"{idx}. {service}")
+print(f"\nOur Mission: {self.mission}")
+
+def organize_event(self, event_name, age_group):
+print(f"\n📢 Exciting Event: {event_name}!")
+print(f"Open for Age Group: {age_group}")
+print("Join us to showcase your coding talent and learn from the best!")
+
+def join_class(self, student_name):
+print(f"\n🎓 Welcome, {student_name}! We're thrilled to have you on board.")
+print("Get ready to start your coding adventure with Codingal!")
+
+# Example usage:
+if __name__ == "__main__":
+codingal = Codingal("Codingal Academy")
+codingal.display_info()
+codingal.organize_event("Code Quest 2024", "8-16 years")
+codingal.join_class("Alice")

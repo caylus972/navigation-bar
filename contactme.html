@@ -1,0 +1,44 @@
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# Email credentials
+your_email = "your_email@example.com" # Replace with your email
+your_password = "your_password" # Replace with your email password
+
+# Recipient's email (Codingal's support email address)
+codingal_email = "support@codingal.com" # Replace with Codingal's official email
+
+# Email content
+subject = "Inquiry About Codingal Services"
+message = """
+Hello Codingal Team,
+
+I hope this message finds you well. I have a few questions regarding your services. Could you please provide more
+information on how I can get started?
+
+Thank you for your assistance.
+
+Best regards,
+[Your Name]
+"""
+
+# Create email
+email = MIMEMultipart()
+email["From"] = your_email
+email["To"] = codingal_email
+email["Subject"] = subject
+
+# Attach the message
+email.attach(MIMEText(message, "plain"))
+
+# Send email
+try:
+# Connect to the SMTP server
+with smtplib.SMTP("smtp.gmail.com", 587) as server: # Replace with your email provider's SMTP server
+server.starttls() # Start TLS encryption
+server.login(your_email, your_password)
+server.sendmail(your_email, codingal_email, email.as_string())
+print("Email sent successfully!")
+except Exception as e:
+print("Failed to send email:", e)

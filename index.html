@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          margin: 0;
+          font-family: arial, helvetica, san-serif;
+        }
+        .topnav{
+            overflow: hidden;
+            background-color: #333;
+        }
+        .topnav a{
+            float: left;
+            color: deeppink;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover{
+            background-color: blueviolet;
+            color:darkcyan;
+        }
+        
+    </style>
+    
+</head>
+<body>
+ <div class="topnav">
+  <a class="active"  href="index.html">home</a>
+  <a href="about.html">about</a>
+  <a href="contactme.html">contact me</a>
+  <a href="gallery.html">gallery</a>  
+ </div>
+ <p># A fun program to inspire young coders about Codingal!
+class Codingal:
+def __init__(self, mission):
+self.mission = mission
+self.skills_taught = ["Python", "Java", "HTML", "CSS", "Game Development"]
+self.students = 0
+
+def enroll_students(self, number):
+self.students += number
+print(f"Welcome to Codingal! {number} new students joined. Total students: {self.students}")
+
+def inspire(self):
+print("Codingal inspires students to create amazing apps, games, and websites!")
+print("Your potential is limitless when you learn to code. 🚀")
+
+# Let's create Codingal in action
+codingal_platform = Codingal("Make coding fun and engaging for kids")
+codingal_platform.inspire()
+codingal_platform.enroll_students(100)
+</p>
+</body>
+</html>
